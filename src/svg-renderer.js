@@ -106,8 +106,8 @@ class SvgRenderer {
             this._svgTag.setAttribute('height', this._svgTag.viewBox.baseVal.height);
         }
         this._measurements = {
-            width: this._svgTag.viewBox.baseVal.width,
-            height: this._svgTag.viewBox.baseVal.height,
+            width: this._svgTag.viewBox.baseVal.width || 1,
+            height: this._svgTag.viewBox.baseVal.height || 1,
             x: this._svgTag.viewBox.baseVal.x,
             y: this._svgTag.viewBox.baseVal.y
         };
