@@ -289,7 +289,7 @@ const _transformPath = function (pathString, transform) {
 };
 
 const GRAPHICS_ELEMENTS = ['circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use'];
-const CONTAINER_ELEMENTS = ['a', 'defs', 'g', 'marker', 'glyph', 'missing-glyph', 'pattern', 'svg', 'switch', 'symbol'];
+const CONTAINER_ELEMENTS = ['a', 'defs', 'g', 'marker', 'glyph', 'missing-glyph', 'pattern', 'svg', 'switch', 'symbol', 'mask'];
 const _isContainerElement = function (element) {
     return element.tagName && CONTAINER_ELEMENTS.includes(element.tagName.toLowerCase());
 };
