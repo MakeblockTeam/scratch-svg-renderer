@@ -112,6 +112,7 @@ const _calculateTransformedEllipse = function (radiusX, radiusY, theta, transfor
         ((1 / newRadiusYOverDet / newRadiusYOverDet) - (1 / newRadiusXOverDet / newRadiusXOverDet));
     if (isNaN(temp) || temp < 0 && Math.abs(temp) < 1e-8) temp = 0; // Fix floating point issue
     temp = Math.sqrt(temp);
+    if (isNaN(temp)) temp = 0; // 处理 NaN
     if (Math.abs(1 - temp) < 1e-8) temp = 1; // Fix floating point issue
     // Solve for which of the two possible thetas is correct
     let newTheta = Math.asin(temp);
